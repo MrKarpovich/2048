@@ -1,3 +1,6 @@
+https://t.me/JluceHok_u3_MuHcka
+
+
 2048 Game Hard Level - FOX Edition
 This is an implementation of the 2048 game in Python with an additional artificial intelligence mode. The game is developed using the Pygame library and includes a custom color scheme and a number of tiles up to 32768.
 
