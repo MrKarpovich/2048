@@ -33,7 +33,7 @@ tile_colors = {
     1024: (237, 197, 63),
     2048: (237, 194, 46),
     4096: (187, 173, 160),
-    8192: (255, 0, 0),       # Новые значения и цвета плиток
+    8192: (255, 0, 0),
     16384: (255, 255, 0),
     32768: (0, 255, 0)
 }
@@ -144,7 +144,7 @@ def move_right(board):
                         break
     return moved
 
-# Мощный ИИ для автоматического хода
+# Мощный ИИ для автоматического хода. Чем больше цифра, тем выше нагрузка.
 def ai_move(board):
     best_move, _ = minimax(board, 5, True, -math.inf, math.inf)
     if best_move:
@@ -231,8 +231,8 @@ def main():
     while player_mode is None:
         window.fill(BACKGROUND_COLOR)
         draw_board(board)
-        draw_text("Смертный", 100, 75)
-        draw_text("Супер Лисенок!", 300, 75)
+        draw_text("Human", 100, 75)
+        draw_text("AI", 300, 75)
         draw_text("Нажмите 1 или 2", WINDOW_SIZE // 2, WINDOW_SIZE // 2)
         pygame.display.update()
 
@@ -278,7 +278,6 @@ def main():
 
         elif player_mode == "AI":
             ai_move(board)
-            # pygame.time.wait(200)  # Увеличиваем время задержки для "разгрузки"
 
 if __name__ == "__main__":
     main()
